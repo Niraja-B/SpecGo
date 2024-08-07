@@ -1,0 +1,275 @@
+/* Admin Dashboard Styles */
+.admin-dashboard {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+.admin-navbar {
+    background-color: rgb(211, 183, 210);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.admin-navbar-left .admin-logo {
+    font-size: 1.5rem;
+    color: rgb(68, 0, 0);
+    font-weight: bold; /* Make font bold */
+}
+
+.admin-navbar-right {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem; /* Move the person symbol slightly to the left */
+}
+
+.admin-icon {
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-left: 2.5rem;
+    color: rgb(68, 0, 0);
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.admin-icon:hover {
+    color: purple; /* Change color to purple on hover */
+}
+
+.admin-dropdown {
+    display: none;
+    position: absolute;
+    right: 1rem;
+    background-color: white;
+    color: black;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+.admin-dropdown span {
+    display: block;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.admin-navbar-right:hover .admin-dropdown {
+    display: block;
+}
+
+/* Main Content Styles */
+.admin-main {
+    display: flex;
+    margin-top: 70px; /* Add margin-top to avoid navbar overlap */
+    align-items: center;
+}
+
+.admin-sidebar {
+    background-color: rgb(211, 183, 210);
+    color: white;
+    padding: 1rem;
+    width: 200px;
+    height: 100vh; /* Full height sidebar */
+    position: fixed; /* Keep sidebar fixed on the left */
+    top: 70px; /* Adjust for fixed navbar height */
+}
+
+.admin-sidebar button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.admin-sidebar button.active,
+.admin-sidebar button:hover {
+    background-color: rgb(68, 0, 0);
+    color: white;
+}
+
+.admin-content {
+    flex-grow: 1;
+    padding: 2rem;
+    margin-left: 220px; /* Adjust for fixed sidebar width */
+}
+
+/* Animation for dashboard boxes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dashboard-box {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    margin: 1rem 0; /* Add margin vertically */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* For positioning the button */
+    width: 500px;
+    opacity: 0; /* Initially hidden */
+    animation: fadeInUp 0.5s forwards;
+    align-items: center;
+}
+
+/* Apply delays for sequential display */
+.dashboard-box:nth-of-type(1) {
+    animation-delay: 0s; /* No delay for the first box */
+}
+
+.dashboard-box:nth-of-type(2) {
+    animation-delay: 0.5s; /* 0.5s delay for the second box */
+}
+
+.dashboard-box:nth-of-type(3) {
+    animation-delay: 1s; /* 1s delay for the third box */
+}
+
+.dashboard-box:nth-of-type(4) {
+    animation-delay: 1.5s; /* 1.5s delay for the fourth box */
+}
+
+.dashboard-box:nth-of-type(5) {
+    animation-delay: 2s; /* 2s delay for the fifth box */
+}
+
+.dashboard-box:hover {
+    box-shadow: 0 0 10px rgba(128, 0, 128, 0.5); /* Purple shadow on hover */
+}
+
+.dashboard-box:hover .view-graph-button {
+    display: block; /* Show button on hover */
+}
+
+.view-graph-button:hover {
+    background-color: rgb(128, 0, 128); /* Darker shade on hover */
+}
+
+.dashboard-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.dashboard-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-value {
+    font-size: 1.5rem;
+}
+
+.dashboard-graph {
+    margin-top: 1rem;
+    width: 100%; /* Full width for the graph image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Users List Styles */
+.users-list {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.users-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.users-list th,
+.users-list td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.users-list th {
+    background-color: rgb(68, 0, 0);
+    color: white;
+}
+
+.users-list tr:hover {
+    background-color: #f5f5f5;
+}
+
+.edit-button,
+.delete-button,
+.block-button,
+.save-button {
+    margin: 0 0.25rem;
+    padding: 0.5rem 0.75rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.edit-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #45a049;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #e53935;
+}
+
+.block-button {
+    background-color: #ff9800;
+    color: white;
+}
+
+.block-button:hover {
+    background-color: #fb8c00;
+}
+
+.save-button {
+    background-color: #008CBA;
+    color: white;
+}
+
+.save-button:hover {
+    background-color: #007bb5;
+}
+
+/* Flash Message Styles */
+.flash-message {
+    background-color: rgb(211, 183, 210);
+    color: black;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-radius: 4px;
+    height: 35px; /* Adjust height as needed */
+    width: 250px;
+}

@@ -1,0 +1,53 @@
+/* Shape.css */
+
+/* Styles for the Shape page */
+.Shape {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: white;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(211, 183, 210); /* Specified color */
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .home-button {
+    background-color: rgb(68, 0, 0); /* Brown color */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 30px; /* Add margin to adjust position */
+  }
+  
+  .Shape-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin-top: 3rem; /* Adjust this value if needed to prevent content overlap with navbar */
+  }
+  
+  .Shape-container {
+    position: relative;
+  }
+  
+  .output_canvas {
+    border: 2px solid rgb(154, 38, 150);
+  }
+  
+  .Shape-link {
+    color: rgb(154, 38, 150);
+  }
+  

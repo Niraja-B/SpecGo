@@ -1,0 +1,229 @@
+/* Navigation bar styling */
+.navbar1 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(211,183,210);
+  color: #000;
+  z-index: 10;
+  width: calc(100% - 20px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  justify-content: flex-end;
+}
+
+.navbar1 .nav-button {
+  border: 1px solid rgb(68,0,0);
+  padding: 8px 16px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none; /* Ensure no underline */
+  background-color: rgb(68,0,0);
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 4px; /* Rounded corners for button-like appearance */
+  display: inline-block; /* Ensures the button appears as a block */
+}
+
+/* Remove underline on hover/focus/active */
+.navbar1 .nav-button:hover,
+.navbar1 .nav-button:focus,
+.navbar1 .nav-button:active {
+  background-color: #000;
+  color: #fff;
+  outline: none; /* Remove default focus outline */
+  box-shadow: none; /* Remove any additional focus/active styles */
+  text-decoration: none; /* Ensure no underline */
+}
+
+/* Filters section styling */
+.filters {
+  width: 200px; /* Reduced width */
+  padding: 10px; /* Reduced padding */
+  background-color: rgb(211,183,210);
+  border-right: 1px solid #ddd;
+  position: fixed;
+  top: 50px;
+  bottom: 0;
+  overflow-y: auto;
+  z-index: 20;
+}
+
+.filters h2 {
+  margin-top: 0;
+  font-size: 18px; /* Adjusted font size */
+}
+
+.filter-group {
+  margin-bottom: 10px; /* Reduced bottom margin */
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px; /* Reduced bottom margin */
+}
+
+.filter-option input[type="checkbox"] {
+  margin-right: 6px; /* Reduced margin */
+}
+
+.filter-option label {
+  cursor: pointer;
+  font-size: 14px; /* Adjusted font size */
+}
+
+/* Reset button styling */
+.reset {
+  background-color: transparent;
+  border: 2px solid rgb(68,0,0);
+  color: rgb(68,0,0);
+  padding: 8px 12px; /* Reduced padding */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.reset:hover {
+  background-color: black;
+  color: #fff;
+}
+
+/* Product list section styling */
+.products {
+  flex: 1;
+  padding: 15px; /* Adjusted padding */
+  margin-left: 200px; /* Adjusted space for the fixed filters */
+  margin-top: 30px; /* Reduced top margin to bring the grid up */
+  overflow-y: auto;
+}
+
+/* Product header styling */
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px; /* Reduced bottom margin */
+  padding-top: 20px; /* Added top padding to move the heading down */
+}
+
+.product-header h2 {
+  margin: 0;
+  font-size: 40px;
+  padding-top: 20px;
+  padding-left: 60px;
+  /* Adjusted font size */
+}
+
+/* Product grid styling */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 products per row */
+  gap: 10px; /* Adjusted gap */
+  max-width: 100%;
+  box-sizing: border-box;
+  transform: scale(0.9); /* Reduce grid size */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Product card styling */
+.product-card1 {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition */
+  width: 90%;
+  animation: fadeIn 0.8s ease-in-out;
+  animation-fill-mode: both;
+}
+
+/* Fade-in animation for product cards */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply staggered animation delays */
+.product-card1:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.product-card1:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.product-card1:nth-child(3) {
+  animation-delay: 1.1s;
+}
+
+.product-card1:nth-child(4) {
+  animation-delay: 1.6s;
+}
+
+.product-card1:nth-child(5) {
+  animation-delay: 2.1s;
+}
+
+.product-card1:nth-child(6) {
+  animation-delay: 2.6s;
+}
+
+.product-card1:nth-child(7) {
+  animation-delay: 3.1s;
+}
+
+.product-card1:nth-child(8) {
+  animation-delay: 3.6s;
+}
+
+.product-card1:nth-child(9) {
+  animation-delay: 4.1s;
+}
+
+/* Zoom effect on hover */
+.product-card1:hover {
+  transform: scale(1.05); /* Slightly zoom in */
+  box-shadow: 0 8px 24px rgba(154, 38, 150, 0.5); /* Increased light purple shadow */
+}
+
+/* Wishlist button styling */
+.wishlist {
+  position: absolute;
+  top: 10px;
+  right: 10px; /* Adjusted position to align better */
+  background: none;
+  border: 1px solid white; /* Outline in white color */
+  border-radius: 50%; /* Make the button round */
+  width: 36px; /* Adjusted width for better appearance */
+  height: 36px; /* Adjusted height for better appearance */
+  font-size: 24px; /* Increased font size for better visibility */
+  color: white; /* Default color */
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+}
+
+/* Heart color change on hover */
+.wishlist:hover {
+  background-color: rgba(255, 0, 0, 0.1); /* Light background color on hover */
+}
+
+/* Active heart styling (when added to wishlist) */
+.wishlist.active {
+  color: red; /* Red color when active */
+}

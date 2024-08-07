@@ -1,0 +1,153 @@
+/* Define colors and shadow effects */
+:root {
+    --brown-shadow: rgba(70, 8, 8, 0.5); /* Brown shadow color */
+    --purple-shadow: rgba(128, 0, 128, 0.5); /* Purple shadow color */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.info-navbarinfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(211,183,210);
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(139, 38, 38, 0.1);
+}
+
+.info-back-button {
+    background-color: #281e10;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.info-back-button:hover {
+    background-color: purple;
+}
+
+.info-product-info-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.info-product-details {
+    display: flex;
+    max-width: 1200px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.info-product-details:hover {
+    box-shadow: 0 4px 20px var(--purple-shadow); /* Apply purple shadow on hover */
+}
+
+.info-product-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.info-main-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px var(--brown-shadow); /* Apply brown shadow */
+    transition: box-shadow 0.3s ease;
+}
+
+.info-main-image:hover {
+    box-shadow: 0 4px 20px var(--purple-shadow); /* Apply purple shadow on hover */
+}
+
+.info-thumbnail-images {
+    display: flex;
+    gap: 10px;
+}
+
+.info-thumbnail-image {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.2s, box-shadow 0.3s ease;
+    box-shadow: 0 2px 10px var(--brown-shadow); /* Apply brown shadow */
+}
+
+.info-thumbnail-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 20px var(--purple-shadow); /* Apply purple shadow on hover */
+}
+
+.info-product-info {
+    flex: 1;
+    padding: 20px;
+}
+
+.info-product-info h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.info-product-info p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.info-product-info h2 {
+    margin: 20px 0;
+    font-size: 20px;
+    color: rgb(203, 29, 29);
+}
+
+.info-promotion {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.info-color-options {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.info-color-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.info-color-circle.selected {
+    transform: scale(1.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.info-promotion {
+    margin-top: 20px;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
